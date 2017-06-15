@@ -1,5 +1,5 @@
 mtllib xLighter.mtl
-usemtl xLighter
+usemtl default 
 v -54.354877 16.585361 -31.154819
 v -54.650745 16.598240 -31.198420
 v -54.909935 16.310555 -30.985924
