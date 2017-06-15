@@ -76,13 +76,13 @@
             container = document.createElement('div');
             document.body.appendChild(container);
             
-            model = 'seagrass.obj';
+            model = 'Seagrass.obj';
             modelType = true;
 
             /* Camera */
 
             camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-            camera.position.z = 3;
+            camera.position.z = 8;
 
             /* Scene */
 
@@ -104,9 +104,9 @@
             /* Model */
 
             var mtlLoader = new THREE.MTLLoader();
-            mtlLoader.setBaseUrl('../assets/testMesh/');
-            mtlLoader.setPath('../assets/testMesh/');
-            mtlLoader.load('seagrass.mtl', function (materials) {
+            mtlLoader.setBaseUrl('../assets/');
+            mtlLoader.setPath('../assets/');
+            mtlLoader.load('Seagrass.mtl', function (materials) {
 
                 materials.preload();
 
@@ -115,7 +115,7 @@
 
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
-                objLoader.setPath('../assets/testMesh/');
+                objLoader.setPath('../assets/');
                 objLoader.load(model, function (object) {
 
                     scene.add(object);
